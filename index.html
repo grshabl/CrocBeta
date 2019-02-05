@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
+            <style>                                                    
+            
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -9,15 +11,15 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/builds.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/builds.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div id="unityContainer" style="width: 1920px; height: 1200px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
         <div class="title">WebGLEditor</div>
       </div>
     </div>
